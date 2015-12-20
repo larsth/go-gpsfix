@@ -77,7 +77,8 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" >package gpsfix
+		<pre class="file" id="file0" >//Package gpsfix is about possible value for a GPS fix: None, NotSeen, Fix2D, Fix3D
+package gpsfix
 
 //FixMode is a type used for indication no GPS fix, 2D GPS fix, and 3D GPS fix.
 type FixMode byte
@@ -152,7 +153,7 @@ func (f *FixMode) UnmarshalJSON(p []byte) error <span class="cov10" title="6">{
         return ErrUnknownFixMode</span>
 }
 
-func (f *FixMode) marshalByte() (v byte, err error) <span class="cov9" title="5">{
+func (f *FixMode) MarshalByte() (v byte, err error) <span class="cov9" title="5">{
         err = nil
         switch *f </span>{
         <span class="cov1" title="1">case FixNotSeen:
@@ -173,7 +174,7 @@ func (f *FixMode) marshalByte() (v byte, err error) <span class="cov9" title="5"
         return</span>
 }
 
-func (f *FixMode) unmarshalByte(data byte) error <span class="cov9" title="5">{
+func (f *FixMode) UnmarshalByte(data byte) error <span class="cov9" title="5">{
         switch data </span>{
         <span class="cov1" title="1">case 0:
                 (*f) = FixNotSeen

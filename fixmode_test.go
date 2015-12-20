@@ -220,7 +220,7 @@ func TestFixModeMarshalByte(t *testing.T) {
 	log.SetOutput(ioutil.Discard)
 
 	for i, testItem := range tdFixModeMarshalByteWant {
-		gotByte, gotErr = testItem.FixMode.marshalByte()
+		gotByte, gotErr = testItem.FixMode.MarshalByte()
 		if testItem.WantByte != gotByte {
 			t.Fatalf("Test %d: got '%v', but want '%v'\n",
 				i, gotByte, testItem.WantByte)
@@ -284,7 +284,7 @@ func TestFixModeUnmarshalByte(t *testing.T) {
 
 	for i, testItem := range tdFixModeUnmarshalByteWant {
 		gotFixMode = new(FixMode)
-		gotErr = gotFixMode.unmarshalByte(testItem.B)
+		gotErr = gotFixMode.UnmarshalByte(testItem.B)
 		if byte((*gotFixMode)) != byte(testItem.WantFixMode) {
 			t.Fatalf("Test: %d:: Got: '%s', but want '%s'",
 				i, gotFixMode.String(), testItem.WantFixMode.String())
@@ -325,7 +325,7 @@ func BenchmarkFixModeUnmarshalJSON(b *testing.B) {
 func BenchmarkFixModeMarshalByte(b *testing.B) {
 	var f = Fix3D
 	for i := 0; i < b.N; i++ {
-		_, _ = f.marshalByte()
+		_, _ = f.MarshalByte()
 	}
 }
 
@@ -335,6 +335,6 @@ func BenchmarkFixModeUnmarshalByte(b *testing.B) {
 		f = Fix3D
 	)
 	for i := 0; i < b.N; i++ {
-		_ = f.unmarshalByte(v)
+		_ = f.UnmarshalByte(v)
 	}
 }

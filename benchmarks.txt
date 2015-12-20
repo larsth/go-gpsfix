@@ -1,7 +1,7 @@
 PASS
-BenchmarkFixModeString-2       	30000000	        42.3 ns/op
-BenchmarkFixModeMarshalJSON-2  	 3000000	       462 ns/op
-BenchmarkFixModeUnmarshalJSON-2	30000000	        61.3 ns/op
-BenchmarkFixModeMarshalByte-2  	30000000	        42.5 ns/op
-BenchmarkFixModeUnmarshalByte-2	50000000	        29.7 ns/op
-ok  	github.com/larsth/go-gpsfix	7.955s
+BenchmarkFixModeString-2       	20000000	        50.8 ns/op
+BenchmarkFixModeMarshalJSON-2  	 3000000	       459 ns/op
+BenchmarkFixModeUnmarshalJSON-2	30000000	        49.2 ns/op
+BenchmarkFixModeMarshalByte-2  	30000000	        46.1 ns/op
+BenchmarkFixModeUnmarshalByte-2	50000000	        29.2 ns/op
+ok  	github.com/larsth/go-gpsfix	8.449s

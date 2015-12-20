@@ -74,7 +74,7 @@ func (f *FixMode) UnmarshalJSON(p []byte) error {
 	return ErrUnknownFixMode
 }
 
-func (f *FixMode) marshalByte() (v byte, err error) {
+func (f *FixMode) MarshalByte() (v byte, err error) {
 	err = nil
 	switch *f {
 	case FixNotSeen:
@@ -95,7 +95,7 @@ func (f *FixMode) marshalByte() (v byte, err error) {
 	return
 }
 
-func (f *FixMode) unmarshalByte(data byte) error {
+func (f *FixMode) UnmarshalByte(data byte) error {
 	switch data {
 	case 0:
 		(*f) = FixNotSeen
