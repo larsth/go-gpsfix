@@ -1,0 +1,6 @@
+github.com/larsth/go-gpsfix/fixmode.go:6:	String		100.0%
+github.com/larsth/go-gpsfix/fixmode.go:28:	MarshalJSON	100.0%
+github.com/larsth/go-gpsfix/fixmode.go:53:	UnmarshalJSON	100.0%
+github.com/larsth/go-gpsfix/fixmode.go:76:	marshalByte	100.0%
+github.com/larsth/go-gpsfix/fixmode.go:97:	unmarshalByte	100.0%
+total:						(statements)	100.0%
